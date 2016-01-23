@@ -8,7 +8,7 @@ A tool for navigating hours of speech by visualizing topic-change over time.
 1. Needs timecoded transcripts. 
 2. Uses a *moving window* with some *hop size* and *window size* defined either by # of words, or # of seconds. 
     
-    A transcript like this:
+    A transcript like this (automatic YouTube):
     ```
     {'start': '7.01', 'dur': '4.27'}
     a special panel discussion among good
@@ -35,7 +35,7 @@ A tool for navigating hours of speech by visualizing topic-change over time.
     "to a growing cluster up international scientists"]
      ```
 3. Strings are tokenized and stemmed and stop-words are removed. 
-4. Latent Dirichlet Allocation is performed on each string. 
+4. Latent Dirichlet Allocation is performed, resulting in n topics. Every string has n topic-weight values (A string may belong to several topics.)
 5. Topics are sorted by earliest maximum relevancy. 
 6. A visualization is drawn. Topic (y-axis, color) by Time (x-axis)
 7. Visualization is used as a video playhead for quick navigation through hours of speech. 
@@ -44,3 +44,12 @@ A tool for navigating hours of speech by visualizing topic-change over time.
 ## Examples with different settings 
 <img src="semantigrams/sorted3_100iters.png">
 <img src="semantigrams/sorted.png">
+
+## TODO
+* Improve topic clusters by 
+    * removing 5000 most common words in English. 
+    * only extracting keywords, places, people, things (use Stanford Named Entity Recognizer)
+* Only use human transcripts, machine transcription adds too much noise.
+* Research state-of-the-art topic clustering for speech
+* Support for n-grams, skip-grams, noun phrases
+* Analyze all TED talks and build website
