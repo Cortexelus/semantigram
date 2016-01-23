@@ -1,7 +1,9 @@
 # Semantigram
 A tool for navigating hours of speech by visualizing topic-change over time. 
 
-(For example, long video lectures.)
+[For example, a long video lecture.](http://cortexel.us/semantigram/)
+
+
 
 ## Algorithm
 
@@ -47,9 +49,13 @@ A tool for navigating hours of speech by visualizing topic-change over time.
 
 ## TODO
 * Improve topic clusters by 
-    * removing 5000 most common words in English. 
-    * only extracting keywords, places, people, things (use Stanford Named Entity Recognizer)
+     * removing 5000 most common words in English. 
+     * only extracting keywords, places, people, things (use Stanford Named Entity Recognizer)
 * Only use human transcripts, machine transcription adds too much noise.
 * Research state-of-the-art topic clustering for speech
 * Support for n-grams, skip-grams, noun phrases
+* Improve UI by displaying keywords
+     * For each topic
+     * At moments in time (onMouseover)
 * Analyze all TED talks and build website
+
